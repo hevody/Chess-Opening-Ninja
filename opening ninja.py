@@ -10,6 +10,7 @@ USERNAME = ''
 RESULTS_FILE = 'results.txt'
 
 def retrieve_chess_data(archived=False, url=''):
+  print(url)
   if archived == True:
     response = requests.get(f'https://api.chess.com/pub/player/{USERNAME}/games/archives', headers=HEADERS)
   else:
@@ -51,8 +52,10 @@ def analysis_for_white(listOfGamesWhite):
   #  determine if the player is White
   ecoDictFrequency = {}
   for indivGame in listOfGamesWhite:
+    if 'eco' not in indivGame: # prevents key value error
+        continue
     if determine_color_played(indivGame) == "White":
-      ecoDictFrequency[indivGame['eco']] = ecoDictFrequency.get(indivGame['eco'], 0) + 1
+      ecoDictFrequency[indivGame["eco"]] = ecoDictFrequency.get(indivGame["eco"], 0) + 1
 
   presentationOfData(ecoDictFrequency, color='White')
 
@@ -60,13 +63,16 @@ def analysis_for_black(listOfGamesBlack):
   # determine if the player is Black
   ecoDictFrequency = {}
   for indivGame in listOfGamesBlack:
+    if 'eco' not in indivGame: # prevents key value error
+        continue
     if determine_color_played(indivGame) == "Black":
-      ecoDictFrequency[indivGame['eco']] = ecoDictFrequency.get(indivGame['eco'], 0) + 1
+      ecoDictFrequency[indivGame["eco"]] = ecoDictFrequency.get(indivGame["eco"], 0) + 1
 
   presentationOfData(ecoDictFrequency, color='Black')
 
 def determine_color_played(oneGame):
   usernamePlayedWhite = oneGame["white"]["username"]
+  usernamePlayedWhite = usernamePlayedWhite.lower()
   #print(usernamePlayedWhite)
   if USERNAME == usernamePlayedWhite:
     return "White"
@@ -99,6 +105,7 @@ if __name__ == '__main__':
 
   print("What is your username?")
   USERNAME = input()
+  USERNAME = USERNAME.lower()
   print("\nPlease wait while we're calling the Chess.com API...\n")
 
   # games = retrieve_chess_data(url='https://api.chess.com/pub/player/hevory/games/2026/02')
