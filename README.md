@@ -42,7 +42,7 @@ Enter 2, if you would like to ... as Black
 Enter 3, if yoouu want to see both!  
 
 Once you made up your mind:  
-The results will appear (and will also be solved in a .txt file so you can view it whenever)  
+The results will appear (and will also be saved in a .txt file so you can view it whenever)  
 
 The results will look somewhat like this:
 ```
