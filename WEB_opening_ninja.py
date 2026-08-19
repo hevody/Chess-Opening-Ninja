@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'session_cookieee'
 
 # 2. preparing routes
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/")
 def main():
   return render_template('index.html')
 

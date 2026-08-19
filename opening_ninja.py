@@ -50,7 +50,9 @@ def analysis_for_sideColors(listOfGames, username:str) -> tuple[dict, dict]:
   BLACKEcoDictFrequency = {}
   for indivGame in listOfGames:
     if 'eco' not in indivGame: # prevents key value error
-        continue
+      continue
+    if indivGame["eco"].split('/')[-1] == 'Undefined': # prevents the display of "Undefined"
+      continue
     if determine_color_played(indivGame, username=username) == 'White':
       keyEcoSplitIndexNeg1 = indivGame["eco"].split('/')[-1]
       whiteEcoDictFrequency[keyEcoSplitIndexNeg1] = whiteEcoDictFrequency.get(keyEcoSplitIndexNeg1, 0) + 1
