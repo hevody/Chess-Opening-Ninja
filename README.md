@@ -1,5 +1,6 @@
-Improve your chess.com elo with this program!  
-This tool can present your most played openings to the least played openings depending on the colors you played (in other words, white or black)  
+### Improve your Chess.com elo with this program! 🦅🥷🏻⚔️ 
+<br>
+This tool can present your most played openings to the least played openings depending on the colors you played (in other words, white or black, even both!)  
 
 # How is Chess Opening Ninja useful? 🎯
 1. Knowing your most played openings will help you prevent pitfalls early in the game  
