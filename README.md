@@ -1,12 +1,15 @@
 Improve your chess.com elo with this program!  
 This tool can present your most played openings to the least played openings depending on the colors you played (in other words, white or black)  
 
-### How is Chess Opening Ninja useful?  
+# How is Chess Opening Ninja useful? 🎯
 1. Knowing your most played openings will help you prevent pitfalls early in the game  
 2. Since the opening is frequently played, there is a high chance that it will also be played in the future games which can prepare you for the attacks in advance  
 3. This program can also help you discover variations of your favorite opening and take advantage of them  
 
-### Instructions / Manual  
+# NEW UPDATE! 🚀
+Chess Opening Ninja is now on the web!
+
+# Instructions / Manual 🛠️ 
 
 Note: This only works in Chess.com so far...  
 
@@ -23,7 +26,7 @@ git clone https://github.com/hevody/Chess-Opening-Ninja.git
 
 2. Run the code!  
 ```bash
-python "opening ninja.py"
+python "CLI_opening_ninja.py"
 ```
 Simple as that!  
 
@@ -64,4 +67,10 @@ The analysis for Black openings by frequency:
 21. Sicilian-Defense-Kramnik-Variation-3...Nc6-4.Nc3 - played 1 time(s)!
 21. Queens-Gambit-Declined-Pseudo-Tarrasch-Defense - played 1 time(s)!
 ```
-
+# Acknowledgements 🤝
+<ul>
+        <li>Big thanks to Chess.com for letting us use their PubAPI</li>
+        <li>I wanna express my gratitude for <strong>Flaticon</strong> for letting me use the icons for the web version of the program; I wanna give thanks especially to:</li>
+        <ul><a href="https://www.flaticon.com/authors/magnifi">Magnific</a> for the ninja icon and for the black knight icon; and</ul>
+        <ul><a href="https://www.flaticon.com/authors/bzzrincantation">BZZRINCANTATION</a> for the white knight icon</ul>
+</ul>
