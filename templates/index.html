@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Ninja</title>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+      background-color: #2E2910;
+      color: #EBE3A7;
+    }
+
+    .glow-both,
+    .black-button,
+    .white-button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      width: 95px;
+    }
+    
+    h1 {
+      color: #EBE3A7;
+    }
+
+    .white-button {
+      background-color: white; 
+      color: black;
+    }
+
+    .black-button {
+      background-color: black;
+      color: white;
+    }
+
+    .glow-both {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    animation: glowing 20s linear infinite;
+    background-size: 400%;
+  }
+  /* credits: https://dev.to/webdeasy/top-20-css-buttons-animations-f41?utm_source=additional_box&utm_medium=internal&utm_campaign=regular&booster_org */
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  input {
+    height: 20px;
+  }
+  </style>
+</head>
+<body>
+  <h1><img src="https://cdn-icons-png.flaticon.com/512/1163/1163115.png" width="auto" height="50" alt="">Opening Ninja</h1>
+  <p>Analyze the opening you play the most in Chess.com</p>
+  <p>Improve your attacks and counterattacks by the frequency of replies your opponents made!</p>
+  <br><br><br>
+  <form action="/store-session" method="POST">
+    <label for="username">username: </label>
+    <input type="text", id="username", name="username_input">
+    <br><br>
+    <button class="white-button" type="submit" name="side_choice" value="White">White</button>
+    <button class="black-button" type="submit" name="side_choice" value="Black">Black</button>
+    <button class="glow-both" type="submit" name="side_choice" value="Both">Both</button>
+  </form>
+</body>
+</html>
