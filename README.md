@@ -9,6 +9,8 @@ This tool can present your most played openings to the least played openings dep
 
 # NEW UPDATE! 🚀
 Chess Opening Ninja is now on the web!
+<br>
+Visit: [chess-opening-ninja.vercel.app](https://chess-opening-ninja.vercel.app)
 
 # Instructions / Manual 🛠️ 
 
@@ -68,6 +70,11 @@ The analysis for Black openings by frequency:
 21. Sicilian-Defense-Kramnik-Variation-3...Nc6-4.Nc3 - played 1 time(s)!
 21. Queens-Gambit-Declined-Pseudo-Tarrasch-Defense - played 1 time(s)!
 ```
+
+# Roadmap 
+- [ ] Add an option to filter by color
+- [ ] Add a hide contents initially, then expand
+
 # Acknowledgements 🤝
 <ul>
         <li>Big thanks to Chess.com for letting us use their PubAPI</li>
