@@ -81,5 +81,5 @@ The analysis for Black openings by frequency:
         <li>I wanna express my gratitude for <strong>Flaticon</strong> for letting me use the icons for the web version of the program; I wanna give thanks especially to:</li>
         <ul><a href="https://www.flaticon.com/authors/magnifi">Magnific</a> for the ninja icon and for the black knight icon; and</ul>
         <ul><a href="https://www.flaticon.com/authors/bzzrincantation">BZZRINCANTATION</a> for the white knight icon</ul>
-        <li>I also want to give credits to this [article](https://dev.to/webdeasy/top-20-css-buttons-animations-f41?utm_source=additional_box&utm_medium=internal&utm_campaign=regular&booster_org) from dev.to by webdeasy.de for the colorful `Both` button in `./templates/index.html`</li>
 </ul>
+I also want to give credits to this [article](https://dev.to/webdeasy/top-20-css-buttons-animations-f41?utm_source=additional_box&utm_medium=internal&utm_campaign=regular&booster_org) from dev.to by webdeasy.de for the colorful `Both` button in `./templates/index.html`
