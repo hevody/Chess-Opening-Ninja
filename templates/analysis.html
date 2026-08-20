@@ -74,13 +74,13 @@
             if (side === 'White') {
               htmlShowResultPage += `<br><br><h2><img src="https://cdn-icons-png.flaticon.com/512/5093/5093004.png " alt="chesskingwhite" height="50" width="auto">White Openings:</h2>`;
               for (const [opening, times] of data.ar.White) {
-                htmlShowResultPage += `<p>${opening} - played ${times} time(s)!`
+                htmlShowResultPage += `<details><summary>${opening}</summary><p>played ${times} time(s)!</p></details>`
                 }
             }
             else if (side == 'Black') {
               htmlShowResultPage += `<br><br><h2><img src="https://cdn-icons-png.flaticon.com/512/4789/4789555.png " alt="chesskingblack" height="50" width="auto">Black Openings:</h2>`;
               for (const [opening, times] of data.ar.Black) {
-                htmlShowResultPage += `<p>${opening} - played ${times} time(s)!`
+                htmlShowResultPage += `<details><summary>${opening}</summary><p>played ${times} time(s)!</p></details>`
               }
             }
         document.getElementById('status-container').innerHTML = htmlShowResultPage;
