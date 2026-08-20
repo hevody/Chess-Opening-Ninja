@@ -83,6 +83,9 @@
                 htmlShowResultPage += `<details><summary>${opening}</summary><p>played ${times} time(s)!</p></details>`
               }
             }
+            else {
+              htmlShowResultPage += `<p>Unfortunately, this user does not exist...</p>`
+            }
         document.getElementById('status-container').innerHTML = htmlShowResultPage;
       }})
       .catch(error => {
