@@ -15,8 +15,6 @@ def retrieve_chess_data(username: str, archived=False, url='') -> list | bool:
 
   if not response.ok:     # fixed random username typed by the client or an error 404 from Chess.com
     return False
-  print(response)
-  input()
 
   response.encoding = "utf-8"
   retrieved_games = response.json()
