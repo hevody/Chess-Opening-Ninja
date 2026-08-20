@@ -7,12 +7,15 @@ from flask import Flask
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'
 HEADERS = {'User-Agent': USER_AGENT}
 
-def retrieve_chess_data(username: str, archived=False, url='') -> list:
+def retrieve_chess_data(username: str, archived=False, url='') -> list | bool:
   if archived == True:
     response = requests.get(f'https://api.chess.com/pub/player/{username}/games/archives', headers=HEADERS)
   else:
     response = requests.get(url, headers=HEADERS)
-  
+
+  if str(response) == '<Response [404]>':     # fixed random username typed by the client or an error 404 from Chess.com
+    return False
+
   response.encoding = "utf-8"
   retrieved_games = response.json()
   if archived == False:

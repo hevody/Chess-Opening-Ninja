@@ -24,6 +24,8 @@ def analysis_page():
 def calc_and_analysis():
   username = session.get('username')
   side_choice = session.get('side_choice')
+  if not opening_ninja.retrieve_chess_data(username=username, archived=True):
+    return jsonify(ar={'userNotExist': 'This user does not exist'})
   archived_games = opening_ninja.retrieve_chess_data(username=username, archived=True)
   compilation_of_games = opening_ninja.compile_the_games(archived_games, u_n=username)
   analysis_result = list(opening_ninja.analysis_for_sideColors(compilation_of_games, username=username))
