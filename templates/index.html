@@ -64,7 +64,7 @@
   <p>Analyze the opening you play the most in Chess.com</p>
   <p>Improve your attacks and counterattacks by the frequency of replies your opponents made!</p>
   <br><br><br>
-  <form action="/store-session" method="POST">
+  <form onkeydown="return event.key !== 'Enter';" action="/store-session" method="POST">
     <label for="username">username: </label>
     <input type="text", id="username", name="username_input">
     <br><br>
