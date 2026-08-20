@@ -73,7 +73,7 @@ The analysis for Black openings by frequency:
 
 # Roadmap 
 - [ ] Add an option to filter by color
-- [ ] Add a hide contents initially, then expand
+- [x] Add a hide contents initially, then expand
 
 # Acknowledgements 🤝
 <ul>
